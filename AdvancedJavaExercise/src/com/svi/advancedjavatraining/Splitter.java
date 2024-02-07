@@ -16,7 +16,7 @@ import com.svi.advancedjavatraining.object.CityInfo;
 public class Splitter {
 
 	public static void main(String[] args) throws IOException {
-		File src = new File("C:\\Users\\lpparungao\\Documents\\Projects\\Github Repositories\\JAVA-Concurrency\\AdvancedJavaExercise\\Input\\ph.json");
+		File src = new File("Input/ph.json");
 
 		try (BufferedReader br = new BufferedReader(new FileReader(src))) {
 

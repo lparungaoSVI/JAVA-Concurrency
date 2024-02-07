@@ -44,7 +44,7 @@ public class PopulationFileWriter {
 			row.createCell(1).setCellValue(data.getCity());
 			row.createCell(2).setCellValue(data.getPopulation());
 		}
-		FileOutputStream fileOut = new FileOutputStream("C:\\Users\\lpparungao\\Documents\\Projects\\Github Repositories\\JAVA-Concurrency\\AdvancedJavaExercise\\Output\\PopulationData.xlsx");
+		FileOutputStream fileOut = new FileOutputStream(OUTPUTFOLDER + File.separator + OUTPUTFILE);
 		workbook.write(fileOut);
 		fileOut.close();
 	}
