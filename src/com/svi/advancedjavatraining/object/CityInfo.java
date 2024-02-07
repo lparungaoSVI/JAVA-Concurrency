@@ -51,7 +51,7 @@ public class CityInfo {
 	}
 
 	public float getPopulation() {
-		if(population.isBlank()) {
+		if(population.trim().isEmpty()) {
 			return 0;
 		} else {
 			return Float.parseFloat(population);
@@ -59,7 +59,7 @@ public class CityInfo {
 	}
 
 	public float getPopulation_proper() {
-		if(population_proper.isBlank()) {
+		if(population_proper.trim().isEmpty()) {
 			return 0;
 		} else {
 			return Float.parseFloat(population_proper);
