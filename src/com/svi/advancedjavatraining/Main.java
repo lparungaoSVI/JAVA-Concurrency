@@ -9,6 +9,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
+import com.svi.advancedjavatraining.concurrency.PopulationGetter;
 import com.svi.advancedjavatraining.object.City;
 import com.svi.advancedjavatraining.object.PopulationData;
 import com.svi.advancedjavatraining.object.Province;
@@ -40,8 +41,8 @@ public class Main {
 			List<City> cities = webLoader.getCities();
 
 			for (City city : cities) {
-				PopulationGetter checker = new PopulationGetter(city, provinces);
-				populationDataList.add(executorService.submit(checker));
+				PopulationGetter populationGetter = new PopulationGetter(city, provinces);
+				populationDataList.add(executorService.submit(populationGetter));
 			}
 
 			populationDataList.forEach(results_future -> {

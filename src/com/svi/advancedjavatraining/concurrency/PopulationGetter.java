@@ -1,4 +1,4 @@
-package com.svi.advancedjavatraining;
+package com.svi.advancedjavatraining.concurrency;
  
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ public class PopulationGetter implements Callable<List<PopulationData>> {
         // TODO Auto-generated method stub
         List<PopulationData> populationDataList = new ArrayList<PopulationData>();
  
-                String provinceKey = city.getProvince(); // Assuming province key matches city's province
+                String provinceKey = city.getProvince();
                 for (Province province : provinces) {
                     if (provinceKey.equals(province.getKey())) {
                         // Load population data
