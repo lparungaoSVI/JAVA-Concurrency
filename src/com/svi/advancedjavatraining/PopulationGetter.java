@@ -10,11 +10,11 @@ import com.svi.advancedjavatraining.object.PopulationData;
 import com.svi.advancedjavatraining.object.Province;
 import com.svi.advancedjavatraining.utils.JSONFileReader;
  
-public class Checker implements Callable<List<PopulationData>> {
+public class PopulationGetter implements Callable<List<PopulationData>> {
     private City city;
     private List<Province> provinces;
  
-    public Checker(City city, List<Province> provinces) {
+    public PopulationGetter(City city, List<Province> provinces) {
         this.city = city;
         this.provinces = provinces;
     }
